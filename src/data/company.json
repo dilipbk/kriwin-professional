@@ -1,0 +1,20 @@
+{
+  "companyInfo": {
+    "name": "Kriwin Professional Consultancy",
+    "email": "info@kriwinprofessional.com",
+    "address": "123 Business District, Financial Center, City 12345",
+    "phone": "+1 (555) 123-4567",
+    "socialMedia": {
+      "linkedin": "https://linkedin.com/company/kriwin-professional",
+      "facebook": "https://facebook.com/kriwinprofessional",
+      "twitter": "https://twitter.com/kriwinpro"
+    }
+  },
+  "founderInfo": {
+    "name": "Ramesh Neupane",
+    "qualification": "Chartered Accountant, CPA",
+    "bio": "With over 10 years of experience in financial consulting and chartered accountancy, John has helped hundreds of businesses optimize their financial operations and achieve sustainable growth.",
+    "image": "/images/founder.jpg",
+    "message": "Our mission is to provide exceptional financial guidance that empowers businesses to reach their full potential."
+  }
+}

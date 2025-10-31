@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
+    />
+
+    <!-- Performance optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#3b82f6" />
+
+    <!-- Mobile optimizations -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Kriwin Consultancy" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <!-- SEO and social media -->
+    <title>Kriwin Professional Consultancy - Expert Financial Services</title>
+    <meta
+      name="description"
+      content="Leading chartered accountancy firm providing expert financial consulting, tax planning, audit services, and business advisory solutions. 10+ years of experience serving 500+ clients."
+    />
+    <meta
+      name="keywords"
+      content="chartered accountant, CPA, financial consulting, tax planning, business advisory, audit services, compliance, risk management, Nepal accountant"
+    />
+    <meta name="author" content="Kriwin Professional Consultancy" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="distribution" content="global" />
+    <meta name="rating" content="general" />
+
+    <!-- Geo tags -->
+    <meta name="geo.region" content="US-NY" />
+    <meta name="geo.placename" content="Bhaktapur Nepal" />
+    <meta name="geo.position" content="40.7074;-74.0113" />
+    <meta name="ICBM" content="40.7074, -74.0113" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Kriwin Professional Consultancy - Expert Financial Services"
+    />
+    <meta
+      property="og:description"
+      content="Leading chartered accountancy firm providing expert financial consulting, tax planning, audit services, and business advisory solutions. 10+ years of experience serving 500+ clients."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kriwin-consultancy.com" />
+    <meta
+      property="og:image"
+      content="https://kriwin-consultancy.com/images/og-home.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Kriwin Professional Consultancy" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@kriwinpro" />
+    <meta name="twitter:creator" content="@kriwinpro" />
+    <meta
+      name="twitter:title"
+      content="Kriwin Professional Consultancy - Expert Financial Services"
+    />
+    <meta
+      name="twitter:description"
+      content="Leading chartered accountancy firm providing expert financial consulting, tax planning, audit services, and business advisory solutions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://kriwin-consultancy.com/images/og-home.jpg"
+    />
+
+    <!-- Critical CSS inlining would go here in production -->
+    <style>
+      /* Critical above-the-fold styles */
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background-color: #ffffff;
+        color: #1f2937;
+      }
+      .loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      .loading-spinner {
+        width: 40px;
+        height: 40px;
+        border: 3px solid #e5e7eb;
+        border-top: 3px solid #3b82f6;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <div id="root"></div>
+
+    <!-- Remove loading screen when app loads -->
+    <script>
+      window.addEventListener("load", function () {
+        const loadingScreen = document.getElementById("loading-screen");
+        if (loadingScreen) {
+          loadingScreen.style.opacity = "0";
+          setTimeout(() => loadingScreen.remove(), 300);
+        }
+      });
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

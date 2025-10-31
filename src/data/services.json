@@ -1,0 +1,67 @@
+{
+  "services": [
+    {
+      "id": "tax-planning",
+      "title": "Tax Planning & Compliance",
+      "shortDescription": "Strategic tax planning to minimize liabilities and ensure compliance",
+      "fullDescription": "Our comprehensive tax planning services help businesses and individuals optimize their tax strategies while maintaining full compliance with current regulations. We provide year-round support to ensure you're always prepared.",
+      "features": [
+        "Annual tax planning strategies",
+        "Quarterly tax reviews",
+        "Compliance monitoring",
+        "Tax optimization consulting"
+      ],
+      "benefits": [
+        "Reduced tax liabilities",
+        "Improved cash flow",
+        "Risk mitigation",
+        "Peace of mind"
+      ],
+      "image": "/images/tax-planning.jpg",
+      "icon": "calculator",
+      "category": "taxation"
+    },
+    {
+      "id": "audit-services",
+      "title": "Audit & Assurance",
+      "shortDescription": "Independent audit services for accuracy and compliance",
+      "fullDescription": "Our audit and assurance services provide independent verification of your financial statements, ensuring accuracy, compliance, and stakeholder confidence in your financial reporting.",
+      "features": [
+        "Financial statement audits",
+        "Internal audit services",
+        "Compliance audits",
+        "Risk assessment"
+      ],
+      "benefits": [
+        "Enhanced credibility",
+        "Regulatory compliance",
+        "Risk identification",
+        "Improved processes"
+      ],
+      "image": "/images/audit-services.jpg",
+      "icon": "search",
+      "category": "audit"
+    },
+    {
+      "id": "business-consulting",
+      "title": "Business Consulting",
+      "shortDescription": "Strategic guidance for business growth and optimization",
+      "fullDescription": "Our business consulting services help organizations identify opportunities, streamline operations, and develop strategies for sustainable growth and improved profitability.",
+      "features": [
+        "Strategic planning",
+        "Process optimization",
+        "Financial analysis",
+        "Performance improvement"
+      ],
+      "benefits": [
+        "Increased efficiency",
+        "Better decision making",
+        "Competitive advantage",
+        "Sustainable growth"
+      ],
+      "image": "/images/business-consulting.jpg",
+      "icon": "trending-up",
+      "category": "consulting"
+    }
+  ]
+}
