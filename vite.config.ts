@@ -11,6 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "kriwin-professional",
   build: {
     // Enable code splitting
     rollupOptions: {
