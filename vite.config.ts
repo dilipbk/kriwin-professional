@@ -11,7 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "kriwin-professional",
+  base: ".",
   build: {
     // Enable code splitting
     rollupOptions: {
@@ -47,7 +47,6 @@ export default defineConfig({
   // Performance optimizations
   server: {
     // Enable HTTP/2
-    https: false,
     // Preload modules
     preTransformRequests: true,
   },
