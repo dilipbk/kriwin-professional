@@ -4,18 +4,20 @@
       "id": "tax-planning",
       "title": "Tax Planning & Compliance",
       "shortDescription": "Strategic tax planning to minimize liabilities and ensure compliance",
-      "fullDescription": "Our comprehensive tax planning services help businesses and individuals optimize their tax strategies while maintaining full compliance with current regulations. We provide year-round support to ensure you're always prepared.",
+      "fullDescription": "Our comprehensive tax planning services help businesses and individuals optimize their tax strategies while maintaining full compliance with current regulations. We provide year-round support, proactive planning, and expert guidance to ensure you're always prepared for tax obligations while maximizing your financial efficiency.",
       "features": [
         "Annual tax planning strategies",
-        "Quarterly tax reviews",
-        "Compliance monitoring",
-        "Tax optimization consulting"
+        "Quarterly tax reviews and assessments",
+        "Real-time compliance monitoring",
+        "Tax optimization consulting",
+        "Multi-jurisdictional tax planning",
+        "Corporate tax structuring"
       ],
       "benefits": [
-        "Reduced tax liabilities",
-        "Improved cash flow",
-        "Risk mitigation",
-        "Peace of mind"
+        "Significant reduction in tax liabilities",
+        "Improved cash flow management",
+        "Comprehensive risk mitigation",
+        "Complete peace of mind with compliance"
       ],
       "image": "/images/tax-planning.jpg",
       "icon": "calculator",
@@ -25,18 +27,20 @@
       "id": "audit-services",
       "title": "Audit & Assurance",
       "shortDescription": "Independent audit services for accuracy and compliance",
-      "fullDescription": "Our audit and assurance services provide independent verification of your financial statements, ensuring accuracy, compliance, and stakeholder confidence in your financial reporting.",
+      "fullDescription": "Our audit and assurance services provide independent verification of your financial statements, ensuring accuracy, compliance, and stakeholder confidence in your financial reporting. We deliver thorough, professional audits that meet international standards and regulatory requirements.",
       "features": [
-        "Financial statement audits",
-        "Internal audit services",
-        "Compliance audits",
-        "Risk assessment"
+        "Comprehensive financial statement audits",
+        "Internal audit services and reviews",
+        "Regulatory compliance audits",
+        "Risk assessment and management",
+        "Management letter recommendations",
+        "Continuous audit monitoring"
       ],
       "benefits": [
-        "Enhanced credibility",
-        "Regulatory compliance",
-        "Risk identification",
-        "Improved processes"
+        "Enhanced credibility with stakeholders",
+        "Full regulatory compliance assurance",
+        "Early risk identification and mitigation",
+        "Improved internal processes and controls"
       ],
       "image": "/images/audit-services.jpg",
       "icon": "search",
@@ -46,22 +50,93 @@
       "id": "business-consulting",
       "title": "Business Consulting",
       "shortDescription": "Strategic guidance for business growth and optimization",
-      "fullDescription": "Our business consulting services help organizations identify opportunities, streamline operations, and develop strategies for sustainable growth and improved profitability.",
+      "fullDescription": "Our business consulting services help organizations identify opportunities, streamline operations, and develop strategies for sustainable growth and improved profitability. We work closely with your team to understand your unique challenges and develop customized solutions.",
       "features": [
-        "Strategic planning",
-        "Process optimization",
-        "Financial analysis",
-        "Performance improvement"
+        "Strategic planning and roadmapping",
+        "Process optimization and automation",
+        "Financial analysis and modeling",
+        "Performance improvement initiatives",
+        "Market analysis and positioning",
+        "Change management support"
       ],
       "benefits": [
-        "Increased efficiency",
-        "Better decision making",
-        "Competitive advantage",
-        "Sustainable growth"
+        "Dramatically increased operational efficiency",
+        "Data-driven decision making capabilities",
+        "Sustainable competitive advantage",
+        "Accelerated business growth and profitability"
       ],
       "image": "/images/business-consulting.jpg",
       "icon": "trending-up",
       "category": "consulting"
+    },
+    {
+      "id": "bookkeeping-cfo",
+      "title": "Bookkeeping & Virtual CFO Services",
+      "shortDescription": "Accurate bookkeeping and expert virtual CFO guidance for smarter financial management",
+      "fullDescription": "Our comprehensive bookkeeping and virtual CFO services provide you with accurate financial records and strategic financial leadership. We handle your day-to-day financial operations while providing executive-level financial guidance to drive your business forward.",
+      "features": [
+        "Daily bookkeeping and record maintenance",
+        "Monthly financial reporting and analysis",
+        "Cash flow management and forecasting",
+        "Budget planning and variance analysis",
+        "Strategic financial planning",
+        "Board-ready financial presentations"
+      ],
+      "benefits": [
+        "Accurate and timely financial information",
+        "Strategic financial guidance without full-time CFO costs",
+        "Improved cash flow management",
+        "Better financial decision-making capabilities"
+      ],
+      "image": "/images/bookkeeping-cfo.jpg",
+      "icon": "calculator",
+      "category": "consulting"
+    },
+    {
+      "id": "hr-services",
+      "title": "Human Resources Services",
+      "shortDescription": "Comprehensive HR solutions covering recruitment, payroll, compliance, and employee development",
+      "fullDescription": "Our human resources services provide comprehensive HR solutions to help you manage your workforce effectively. From recruitment and onboarding to payroll management and compliance, we handle all aspects of human resource management so you can focus on growing your business.",
+      "features": [
+        "Recruitment and talent acquisition",
+        "Payroll processing and management",
+        "Employee onboarding and training",
+        "HR compliance and policy development",
+        "Performance management systems",
+        "Employee relations and conflict resolution"
+      ],
+      "benefits": [
+        "Streamlined HR processes and operations",
+        "Reduced compliance risks and legal issues",
+        "Improved employee satisfaction and retention",
+        "Enhanced organizational efficiency and productivity"
+      ],
+      "image": "/images/hr-services.jpg",
+      "icon": "search",
+      "category": "consulting"
+    },
+    {
+      "id": "taxation-compliance",
+      "title": "Taxation & Regulatory Compliance",
+      "shortDescription": "Expert tax planning and regulatory compliance services ensuring accuracy and legal adherence",
+      "fullDescription": "Our taxation and regulatory compliance services ensure your business meets all legal requirements while optimizing your tax position. We stay current with changing regulations and provide proactive guidance to keep your business compliant and efficient.",
+      "features": [
+        "Corporate tax preparation and filing",
+        "Regulatory compliance monitoring",
+        "Tax audit representation",
+        "International tax planning",
+        "VAT and sales tax management",
+        "Regulatory reporting and documentation"
+      ],
+      "benefits": [
+        "Complete regulatory compliance assurance",
+        "Minimized tax liabilities and penalties",
+        "Reduced audit risks and complications",
+        "Peace of mind with expert representation"
+      ],
+      "image": "/images/taxation-compliance.jpg",
+      "icon": "calculator",
+      "category": "taxation"
     }
   ]
 }

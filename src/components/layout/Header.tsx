@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
 import { buttonHover } from "../../utils/animations";
+import { ServicesDropdown } from "../common/ServicesDropdown";
 
 interface HeaderProps {
   className?: string;
@@ -16,6 +17,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -62,7 +64,6 @@ export const Header: React.FC<HeaderProps> = ({
             {[
               { name: "Home", href: "/" },
               { name: "About", href: "/about" },
-              { name: "Services", href: "/services" },
               { name: "Portfolio", href: "/portfolio" },
               { name: "Blog", href: "/blog" },
               { name: "Contact", href: "/contact" },
@@ -86,6 +87,13 @@ export const Header: React.FC<HeaderProps> = ({
                 ></span>
               </Link>
             ))}
+
+            {/* Services Dropdown */}
+            <ServicesDropdown
+              isOpen={isServicesOpen}
+              onToggle={() => setIsServicesOpen(!isServicesOpen)}
+              onClose={() => setIsServicesOpen(false)}
+            />
           </nav>
 
           {/* Theme Toggle & CTA */}
@@ -187,7 +195,6 @@ export const Header: React.FC<HeaderProps> = ({
                 {[
                   { name: "Home", href: "/" },
                   { name: "About", href: "/about" },
-                  { name: "Services", href: "/services" },
                   { name: "Portfolio", href: "/portfolio" },
                   { name: "Blog", href: "/blog" },
                   { name: "Contact", href: "/contact" },
@@ -205,6 +212,44 @@ export const Header: React.FC<HeaderProps> = ({
                     {item.name}
                   </Link>
                 ))}
+
+                {/* Mobile Services Section */}
+                <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                  <Link
+                    to="/services"
+                    className={`text-gray-700 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-400 font-medium py-2 transition-colors duration-300 block ${
+                      location.pathname === "/services"
+                        ? "text-blue-700 dark:text-blue-400"
+                        : ""
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Services
+                  </Link>
+                  <div className="ml-4 mt-2 space-y-2">
+                    <Link
+                      to="/services/tax-planning"
+                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Tax Planning & Compliance
+                    </Link>
+                    <Link
+                      to="/services/audit-services"
+                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Audit & Assurance
+                    </Link>
+                    <Link
+                      to="/services/business-consulting"
+                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Business Consulting
+                    </Link>
+                  </div>
+                </div>
 
                 <button className="group relative inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 overflow-hidden mt-4">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 dark:from-blue-600 dark:to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

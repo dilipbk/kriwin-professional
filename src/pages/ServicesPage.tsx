@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { PageTransition } from "../components/ui";
 import { SEOHead } from "../components/common/SEOHead";
@@ -13,307 +14,330 @@ import {
   scaleInSpring,
 } from "../utils/animations";
 
+const services = [
+  {
+    id: "audit-insurance",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+        />
+      </svg>
+    ),
+    title: "Audit & Insurance",
+    description:
+      "Comprehensive audit solutions ensuring accuracy, transparency, and compliance in financial reporting.",
+    features: [
+      "Cash Flow Analysis",
+      "Budget Planning",
+      "Financial Forecasting",
+      "Investment Strategy",
+    ],
+
+    popular: false,
+    gradient: "from-blue-500 to-blue-600",
+    iconBg: "bg-blue-100 dark:bg-blue-900/30",
+    iconColor: "text-blue-600 dark:text-blue-400",
+  },
+  {
+    id: "bookkeeping-cfo",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+        />
+      </svg>
+    ),
+    title: "Bookkeeping And Virtual CFO Services",
+    description:
+      "Accurate bookkeeping and expert virtual CFO guidance for smarter financial management and growth.",
+    features: [
+      "Tax Planning",
+      "Compliance Management",
+      "Tax Audits",
+      "International Tax",
+    ],
+
+    popular: true,
+    gradient: "from-green-500 to-green-600",
+    iconBg: "bg-green-100 dark:bg-green-900/30",
+    iconColor: "text-green-600 dark:text-green-400",
+  },
+  {
+    id: "hr-services",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+        />
+      </svg>
+    ),
+    title: "Human Resources Services",
+    description:
+      "Comprehensive HR solutions covering recruitment, payroll, compliance, and employee development to enhance organizational efficiency.",
+    features: [
+      "Financial Audits",
+      "Internal Controls",
+      "Risk Assessment",
+      "Compliance Reviews",
+    ],
+
+    popular: false,
+    gradient: "from-purple-500 to-purple-600",
+    iconBg: "bg-purple-100 dark:bg-purple-900/30",
+    iconColor: "text-purple-600 dark:text-purple-400",
+  },
+  {
+    id: "taxation-compliance",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M13 10V3L4 14h7v7l9-11h-7z"
+        />
+      </svg>
+    ),
+    title: "Taxation And Other Regulatory Compliance",
+    description:
+      "Expert tax planning and regulatory compliance services ensuring accuracy, efficiency, and adherence to legal standards.",
+
+    popular: false,
+    gradient: "from-orange-500 to-orange-600",
+    iconBg: "bg-orange-100 dark:bg-orange-900/30",
+    iconColor: "text-orange-600 dark:text-orange-400",
+  },
+  {
+    id: "ifrs-nfrs-consulting",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+        />
+      </svg>
+    ),
+    title: "IFRS And NFRS Consulting",
+    description:
+      "Professional IFRS and NFRS consulting for accurate financial reporting and global compliance standards.",
+    popular: false,
+    gradient: "from-red-500 to-red-600",
+    iconBg: "bg-red-100 dark:bg-red-900/30",
+    iconColor: "text-red-600 dark:text-red-400",
+  },
+  {
+    id: "system-setup-enhancement",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+        />
+      </svg>
+    ),
+    title: "System Set Up And Enhancement",
+    description:
+      "Efficient system setup and enhancement services to streamline operations and improve organizational performance.",
+    popular: false,
+    gradient: "from-indigo-500 to-indigo-600",
+    iconBg: "bg-indigo-100 dark:bg-indigo-900/30",
+    iconColor: "text-indigo-600 dark:text-indigo-400",
+  },
+  {
+    id: "accounting-finance-outsourcing",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+        />
+      </svg>
+    ),
+    title: "Accounting and finance outsourcing",
+    description:
+      "Comprehensive accounting and finance outsourcing services to streamline operations, ensure accuracy, reduce costs, and support informed strategic business decisions.",
+    features: [
+      "Cash Flow Analysis",
+      "Budget Planning",
+      "Financial Forecasting",
+      "Investment Strategy",
+    ],
+
+    popular: false,
+    gradient: "from-blue-500 to-blue-600",
+    iconBg: "bg-blue-100 dark:bg-blue-900/30",
+    iconColor: "text-blue-600 dark:text-blue-400",
+  },
+  {
+    id: "merger-acquisition",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+        />
+      </svg>
+    ),
+    title: "Merger & Acquisition",
+    description:
+      "Strategic merger and acquisition advisory offering end-to-end support for seamless transactions, growth opportunities, value maximization, and long-term business success.",
+    features: [
+      "Tax Planning",
+      "Compliance Management",
+      "Tax Audits",
+      "International Tax",
+    ],
+
+    popular: false,
+    gradient: "from-green-500 to-green-600",
+    iconBg: "bg-green-100 dark:bg-green-900/30",
+    iconColor: "text-green-600 dark:text-green-400",
+  },
+  {
+    id: "risk-investigations",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+        />
+      </svg>
+    ),
+    title: "Risk & Investigations",
+    description:
+      "In-depth risk assessment and investigative services to identify threats, prevent fraud, ensure regulatory compliance, and protect business reputation.",
+    features: [
+      "Financial Audits",
+      "Internal Controls",
+      "Risk Assessment",
+      "Compliance Reviews",
+    ],
+
+    popular: false,
+    gradient: "from-purple-500 to-purple-600",
+    iconBg: "bg-purple-100 dark:bg-purple-900/30",
+    iconColor: "text-purple-600 dark:text-purple-400",
+  },
+  {
+    id: "valuation-business-modelling",
+    icon: (
+      <svg
+        className="w-8 h-8"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+        />
+      </svg>
+    ),
+    title: "Valuation And Business Modelling",
+    description:
+      "Professional valuation and business modeling services to assess worth, forecast growth, and drive strategic decision-making.",
+    popular: false,
+    gradient: "from-red-500 to-red-600",
+    iconBg: "bg-red-100 dark:bg-red-900/30",
+    iconColor: "text-red-600 dark:text-red-400",
+  },
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Initial Consultation",
+    description:
+      "We begin with a comprehensive consultation to understand your specific needs, challenges, and objectives.",
+  },
+  {
+    step: "02",
+    title: "Analysis & Planning",
+    description:
+      "Our experts analyze your current situation and develop a customized strategy tailored to your goals.",
+  },
+  {
+    step: "03",
+    title: "Implementation",
+    description:
+      "We work closely with you to implement the recommended solutions and strategies effectively.",
+  },
+  {
+    step: "04",
+    title: "Monitoring & Support",
+    description:
+      "We provide ongoing monitoring, support, and adjustments to ensure continued success and optimization.",
+  },
+];
+
 export const ServicesPage: React.FC = () => {
-  const services = [
-    {
-      id: 1,
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-          />
-        </svg>
-      ),
-      title: "Financial Planning & Analysis",
-      shortDescription:
-        "Strategic financial planning to optimize your business performance",
-      fullDescription:
-        "Our comprehensive financial planning services help businesses create robust financial strategies, analyze performance metrics, and make data-driven decisions for sustainable growth.",
-      features: [
-        "Cash Flow Analysis & Forecasting",
-        "Budget Planning & Management",
-        "Financial Performance Analysis",
-        "Investment Strategy Development",
-        "Risk Assessment & Mitigation",
-        "Financial Reporting & KPI Tracking",
-      ],
-      benefits: [
-        "Improved cash flow management",
-        "Better financial decision making",
-        "Reduced financial risks",
-        "Enhanced profitability",
-      ],
-      pricing: {
-        starting: "$2,500",
-        description: "Comprehensive financial planning package",
-      },
-      popular: false,
-      gradient: "from-blue-500 to-blue-600",
-      iconBg: "bg-blue-100 dark:bg-blue-900/30",
-      iconColor: "text-blue-600 dark:text-blue-400",
-    },
-    {
-      id: 2,
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-          />
-        </svg>
-      ),
-      title: "Tax Planning & Optimization",
-      shortDescription:
-        "Minimize tax burden while maximizing savings legally and efficiently",
-      fullDescription:
-        "Our expert tax professionals provide comprehensive tax planning strategies to help individuals and businesses minimize their tax liabilities while ensuring full compliance with all regulations.",
-      features: [
-        "Strategic Tax Planning",
-        "Tax Compliance Management",
-        "Tax Audit Representation",
-        "International Tax Services",
-        "Estate & Gift Tax Planning",
-        "Business Tax Optimization",
-      ],
-      benefits: [
-        "Significant tax savings",
-        "Reduced audit risks",
-        "Improved compliance",
-        "Peace of mind",
-      ],
-      pricing: {
-        starting: "$1,800",
-        description: "Complete tax optimization service",
-      },
-      popular: true,
-      gradient: "from-green-500 to-green-600",
-      iconBg: "bg-green-100 dark:bg-green-900/30",
-      iconColor: "text-green-600 dark:text-green-400",
-    },
-    {
-      id: 3,
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-          />
-        </svg>
-      ),
-      title: "Audit & Assurance Services",
-      shortDescription:
-        "Independent audit services ensuring accuracy and compliance",
-      fullDescription:
-        "Our audit and assurance services provide independent verification of financial statements, ensuring accuracy, compliance, and stakeholder confidence in your financial reporting.",
-      features: [
-        "Financial Statement Audits",
-        "Internal Control Reviews",
-        "Compliance Audits",
-        "Risk Assessment Services",
-        "Management Letter Reports",
-        "Agreed-Upon Procedures",
-      ],
-      benefits: [
-        "Enhanced credibility",
-        "Improved internal controls",
-        "Regulatory compliance",
-        "Stakeholder confidence",
-      ],
-      pricing: {
-        starting: "$5,000",
-        description: "Professional audit services",
-      },
-      popular: false,
-      gradient: "from-purple-500 to-purple-600",
-      iconBg: "bg-purple-100 dark:bg-purple-900/30",
-      iconColor: "text-purple-600 dark:text-purple-400",
-    },
-    {
-      id: 4,
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-      title: "Business Consulting",
-      shortDescription:
-        "Strategic consulting to accelerate growth and improve efficiency",
-      fullDescription:
-        "Our business consulting services help companies optimize operations, develop growth strategies, and navigate complex business challenges with expert guidance and proven methodologies.",
-      features: [
-        "Growth Strategy Development",
-        "Process Optimization",
-        "Market Analysis & Research",
-        "Performance Improvement",
-        "Change Management",
-        "Business Model Innovation",
-      ],
-      benefits: [
-        "Accelerated growth",
-        "Improved efficiency",
-        "Better market positioning",
-        "Enhanced profitability",
-      ],
-      pricing: {
-        starting: "$3,200",
-        description: "Strategic business consulting",
-      },
-      popular: false,
-      gradient: "from-orange-500 to-orange-600",
-      iconBg: "bg-orange-100 dark:bg-orange-900/30",
-      iconColor: "text-orange-600 dark:text-orange-400",
-    },
-    {
-      id: 5,
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-          />
-        </svg>
-      ),
-      title: "Risk Management",
-      shortDescription:
-        "Comprehensive risk assessment and management solutions",
-      fullDescription:
-        "Our risk management services help businesses identify, assess, and mitigate various risks that could impact their operations, financial performance, and strategic objectives.",
-      features: [
-        "Risk Assessment & Analysis",
-        "Compliance Monitoring",
-        "Internal Control Systems",
-        "Fraud Prevention Programs",
-        "Business Continuity Planning",
-        "Insurance Advisory Services",
-      ],
-      benefits: [
-        "Reduced business risks",
-        "Better compliance",
-        "Protected assets",
-        "Business continuity",
-      ],
-      pricing: {
-        starting: "$2,800",
-        description: "Risk management solutions",
-      },
-      popular: false,
-      gradient: "from-red-500 to-red-600",
-      iconBg: "bg-red-100 dark:bg-red-900/30",
-      iconColor: "text-red-600 dark:text-red-400",
-    },
-    {
-      id: 6,
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-          />
-        </svg>
-      ),
-      title: "Corporate Finance",
-      shortDescription:
-        "Expert corporate finance services for strategic growth",
-      fullDescription:
-        "Our corporate finance team provides expert advisory services for mergers, acquisitions, capital raising, and other strategic transactions to help businesses achieve their growth objectives.",
-      features: [
-        "M&A Advisory Services",
-        "Capital Raising Support",
-        "Business Valuation",
-        "Due Diligence Services",
-        "Financial Modeling",
-        "Transaction Structuring",
-      ],
-      benefits: [
-        "Strategic growth",
-        "Optimal deal structures",
-        "Maximized valuations",
-        "Successful transactions",
-      ],
-      pricing: {
-        starting: "$8,500",
-        description: "Corporate finance advisory",
-      },
-      popular: false,
-      gradient: "from-indigo-500 to-indigo-600",
-      iconBg: "bg-indigo-100 dark:bg-indigo-900/30",
-      iconColor: "text-indigo-600 dark:text-indigo-400",
-    },
-  ];
-
-  const processSteps = [
-    {
-      step: "01",
-      title: "Initial Consultation",
-      description:
-        "We begin with a comprehensive consultation to understand your specific needs, challenges, and objectives.",
-    },
-    {
-      step: "02",
-      title: "Analysis & Planning",
-      description:
-        "Our experts analyze your current situation and develop a customized strategy tailored to your goals.",
-    },
-    {
-      step: "03",
-      title: "Implementation",
-      description:
-        "We work closely with you to implement the recommended solutions and strategies effectively.",
-    },
-    {
-      step: "04",
-      title: "Monitoring & Support",
-      description:
-        "We provide ongoing monitoring, support, and adjustments to ensure continued success and optimization.",
-    },
-  ];
-
   return (
     <>
       <SEOHead
@@ -424,7 +448,7 @@ export const ServicesPage: React.FC = () => {
                 )}
 
                 {/* Service Card */}
-                <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden h-full">
+                <div className="bg-white flex flex-col dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden h-full">
                   {/* Header */}
                   <div className="p-8 pb-6">
                     <div
@@ -435,13 +459,13 @@ export const ServicesPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                      {service.fullDescription}
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {service.description}
                     </p>
                   </div>
 
                   {/* Features */}
-                  <div className="px-8 pb-6">
+                  {/* <div className="px-8 pb-6">
                     <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                       What's Included:
                     </h4>
@@ -467,31 +491,33 @@ export const ServicesPage: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-                  </div>
+                  </div> */}
 
                   {/* Footer */}
-                  <div className="p-8 pt-6 border-t border-gray-100 dark:border-gray-700 mt-auto">
-                    <motion.button
-                      className="w-full group relative inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 rounded-2xl shadow-lg overflow-hidden"
-                      {...buttonHoverBounce}
-                    >
-                      <span className="relative z-10 flex items-center">
-                        Learn More
-                        <svg
-                          className="w-4 h-4 ml-2"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </span>
-                    </motion.button>
+                  <div className="p-8 pt-2 mt-auto">
+                    <Link to={`/services/${service.id}`}>
+                      <motion.button
+                        className="w-full group relative inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 rounded-2xl shadow-lg overflow-hidden"
+                        {...buttonHoverBounce}
+                      >
+                        <span className="relative z-10 flex items-center">
+                          Learn More
+                          <svg
+                            className="w-4 h-4 ml-2"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            />
+                          </svg>
+                        </span>
+                      </motion.button>
+                    </Link>
                   </div>
                 </div>
               </motion.div>

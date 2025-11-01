@@ -29,9 +29,9 @@ const services = [
         />
       </svg>
     ),
-    title: "Financial Planning",
+    title: "Audit & Insurance",
     description:
-      "Strategic financial planning and analysis to optimize your business performance and growth trajectory with data-driven insights.",
+      "Comprehensive audit solutions ensuring accuracy, transparency, and compliance in financial reporting.",
     features: [
       "Cash Flow Analysis",
       "Budget Planning",
@@ -61,9 +61,9 @@ const services = [
         />
       </svg>
     ),
-    title: "Tax Optimization",
+    title: "Bookkeeping And Virtual CFO Services",
     description:
-      "Comprehensive tax planning and optimization strategies to minimize your tax burden legally and efficiently while maximizing savings.",
+      "Accurate bookkeeping and expert virtual CFO guidance for smarter financial management and growth.",
     features: [
       "Tax Planning",
       "Compliance Management",
@@ -93,9 +93,9 @@ const services = [
         />
       </svg>
     ),
-    title: "Audit & Assurance",
+    title: "Human Resources Services",
     description:
-      "Independent audit services ensuring accuracy, compliance, and stakeholder confidence in your financial reporting and operations.",
+      "Comprehensive HR solutions covering recruitment, payroll, compliance, and employee development to enhance organizational efficiency.",
     features: [
       "Financial Audits",
       "Internal Controls",
@@ -125,15 +125,9 @@ const services = [
         />
       </svg>
     ),
-    title: "Business Consulting",
+    title: "Taxation And Other Regulatory Compliance",
     description:
-      "Strategic business consulting to accelerate growth, improve efficiency, and maximize your company's potential in competitive markets.",
-    features: [
-      "Growth Strategy",
-      "Process Optimization",
-      "Market Analysis",
-      "Performance Improvement",
-    ],
+      "Expert tax planning and regulatory compliance services ensuring accuracy, efficiency, and adherence to legal standards.",
 
     popular: false,
     gradient: "from-orange-500 to-orange-600",
@@ -157,16 +151,9 @@ const services = [
         />
       </svg>
     ),
-    title: "Risk Management",
+    title: "IFRS And NFRS Consulting",
     description:
-      "Comprehensive risk assessment and management solutions to protect your business from financial uncertainties and market volatility.",
-    features: [
-      "Risk Assessment",
-      "Compliance Monitoring",
-      "Internal Controls",
-      "Fraud Prevention",
-    ],
-
+      "Professional IFRS and NFRS consulting for accurate financial reporting and global compliance standards.",
     popular: false,
     gradient: "from-red-500 to-red-600",
     iconBg: "bg-red-100 dark:bg-red-900/30",
@@ -189,16 +176,9 @@ const services = [
         />
       </svg>
     ),
-    title: "Corporate Finance",
+    title: "System Set Up And Enhancement",
     description:
-      "Expert corporate finance services including mergers, acquisitions, and capital structure optimization for strategic growth.",
-    features: [
-      "M&A Advisory",
-      "Capital Raising",
-      "Valuation Services",
-      "Due Diligence",
-    ],
-
+      "Efficient system setup and enhancement services to streamline operations and improve organizational performance.",
     popular: false,
     gradient: "from-indigo-500 to-indigo-600",
     iconBg: "bg-indigo-100 dark:bg-indigo-900/30",
@@ -294,7 +274,7 @@ export const ServicesSection: React.FC = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.id}
-              className="group relative"
+              className="group relative h-full"
               variants={staggerItem}
               initial="initial"
               whileInView="animate"
@@ -324,7 +304,7 @@ export const ServicesSection: React.FC = () => {
 
               {/* Main Card */}
               <motion.div
-                className="relative bg-white dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden"
+                className="relative bg-white h-full dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden"
                 {...cardHoverFloat}
                 whileHover={{
                   y: -12,
@@ -334,15 +314,15 @@ export const ServicesSection: React.FC = () => {
                 }}
               >
                 {/* Gradient Background on Hover */}
-                <div
+                {/* <div
                   className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                ></div>
+                ></div> */}
 
                 {/* Content */}
                 <div className="relative z-10 p-8">
                   {/* Icon */}
                   <motion.div
-                    className={`w-20 h-20 ${service.iconBg} rounded-3xl flex items-center justify-center ${service.iconColor} group-hover:bg-white/20 group-hover:text-white mb-6 transition-all duration-500`}
+                    className={`w-20 h-20 ${service.iconBg} rounded-3xl flex items-center justify-center ${service.iconColor} mb-6 transition-all duration-500`}
                     whileHover={{
                       scale: 1.15,
                       rotate: [0, -5, 5, 0],
@@ -356,21 +336,21 @@ export const ServicesSection: React.FC = () => {
                   </motion.div>
 
                   {/* Title & Description */}
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-white mb-4 transition-colors duration-500">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-500">
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 dark:text-gray-300 group-hover:text-white/90 mb-6 leading-relaxed transition-colors duration-500">
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed transition-colors duration-500">
                     {service.description}
                   </p>
 
                   {/* Features */}
-                  <ul className="space-y-3 mb-8">
+                  {/* <ul className="space-y-3 mb-8">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm">
-                        <div className="w-5 h-5 bg-blue-600 dark:bg-blue-500 group-hover:bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0 transition-colors duration-500">
+                        <div className="w-5 h-5 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center mr-3 flex-shrink-0 transition-colors duration-500">
                           <svg
-                            className="w-3 h-3 text-white group-hover:text-blue-600"
+                            className="w-3 h-3 text-white"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -381,12 +361,12 @@ export const ServicesSection: React.FC = () => {
                             />
                           </svg>
                         </div>
-                        <span className="text-gray-700 dark:text-gray-300 group-hover:text-white/90 font-medium transition-colors duration-500">
+                        <span className="text-gray-700 dark:text-gray-300 font-medium transition-colors duration-500">
                           {feature}
                         </span>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
 
                   {/* Price & CTA */}
                   <div className="flex items-center justify-between">
