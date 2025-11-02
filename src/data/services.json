@@ -4,7 +4,7 @@
       "id": "tax-planning",
       "title": "Tax Planning & Compliance",
       "shortDescription": "Strategic tax planning to minimize liabilities and ensure compliance",
-      "fullDescription": "Our comprehensive tax planning services help businesses and individuals optimize their tax strategies while maintaining full compliance with current regulations. We provide year-round support, proactive planning, and expert guidance to ensure you're always prepared for tax obligations while maximizing your financial efficiency.",
+      "fullDescription": "Our comprehensive <b>Tax Planning & Compliance</b> services are designed to provide end-to-end tax management solutions for businesses and individuals seeking efficiency, transparency, and peace of mind. We go beyond traditional tax filing by focusing on strategic planning, proactive monitoring, and customized advisory tailored to your financial goals and business structure. Our team continuously analyzes changes in tax laws and regulatory requirements to ensure your operations remain fully compliant and optimized. From managing direct and indirect taxes to handling audits, documentation, and cross-border taxation, we deliver an integrated approach that enhances financial control and minimizes risks. With year-round support, we help you anticipate tax obligations, identify savings opportunities, and develop sustainable strategies that strengthen your overall financial performance and long-term growth.",
       "features": [
         "Annual tax planning strategies",
         "Quarterly tax reviews and assessments",
@@ -23,11 +23,58 @@
       "icon": "calculator",
       "category": "taxation"
     },
+
+    {
+      "id": "ifrs-nfrs-consulting",
+      "title": "IFRS and NFRS Consulting",
+      "shortDescription": "Expert consulting to ensure accurate financial reporting and compliance with global standards.",
+      "fullDescription": "Our <b>IFRS and NFRS Consulting</b> services help businesses align their financial reporting with international and national accounting standards. We provide end-to-end guidance on the adoption, implementation, and interpretation of IFRS and NFRS to ensure full compliance and consistency in your financial statements. Our consultants assist in transitioning from local GAAP, preparing detailed financial disclosures, and resolving complex accounting issues. With a focus on transparency, comparability, and accuracy, we empower organizations to build investor confidence and maintain global credibility while meeting all regulatory expectations.",
+      "features": [
+        "Comprehensive IFRS and NFRS implementation support",
+        "Transition from local GAAP to IFRS/NFRS",
+        "Financial statement restatement and review",
+        "Technical accounting advisory",
+        "Customized training for finance teams",
+        "Regulatory and disclosure compliance"
+      ],
+      "benefits": [
+        "Enhanced accuracy and transparency in reporting",
+        "Improved global credibility and investor trust",
+        "Seamless transition to international standards",
+        "Reduced compliance and reporting risks"
+      ],
+      "image": "/images/ifrs-nfrs-consulting.jpg",
+      "icon": "globe",
+      "category": "consulting"
+    },
+    {
+      "id": "audit-insurance",
+      "title": "Audit & Assurance",
+      "shortDescription": "Independent audits ensuring accuracy, transparency, and compliance in financial reporting.",
+      "fullDescription": "Our <b>Audit and Assurance Services</b> provide a thorough and independent evaluation of your financial statements to ensure transparency, accuracy, and reliability in your reporting. We go beyond basic compliance to deliver valuable insights that strengthen your internal controls, enhance decision-making, and build trust with stakeholders. Our team follows globally recognized auditing standards and uses a risk-based approach to identify potential issues before they arise. Whether statutory, internal, or special-purpose audits, we conduct every process with integrity and precision, helping your organization improve governance, maintain regulatory compliance, and instill confidence among investors, partners, and management.",
+      "features": [
+        "Comprehensive financial statement audits",
+        "Internal control evaluation",
+        "Risk-based audit approach",
+        "Regulatory and statutory compliance review",
+        "Operational and performance audits",
+        "Special-purpose audits and reports"
+      ],
+      "benefits": [
+        "Enhanced financial transparency",
+        "Increased stakeholder confidence",
+        "Improved decision-making through audit insights",
+        "Reduced compliance risks and errors"
+      ],
+      "image": "/images/audit-assurance.jpg",
+      "icon": "shield-check",
+      "category": "assurance"
+    },
     {
       "id": "audit-services",
       "title": "Audit & Assurance",
       "shortDescription": "Independent audit services for accuracy and compliance",
-      "fullDescription": "Our audit and assurance services provide independent verification of your financial statements, ensuring accuracy, compliance, and stakeholder confidence in your financial reporting. We deliver thorough, professional audits that meet international standards and regulatory requirements.",
+      "fullDescription": "Our <b>Audit and Assurance Services</b> provide a thorough and independent evaluation of your financial statements to ensure transparency, accuracy, and reliability in your financial reporting. We go beyond basic compliance to deliver valuable insights that strengthen your internal controls, enhance decision-making, and build trust with stakeholders. Our team follows globally recognized auditing standards and employs a risk-based approach to identify potential issues before they arise. Whether statutory, internal, or special-purpose audits, we ensure every process is conducted with integrity and precision. By combining in-depth financial analysis, industry expertise, and advanced audit methodologies, we help your organization improve governance, maintain regulatory compliance, and instill confidence among investors, partners, and management.",
       "features": [
         "Comprehensive financial statement audits",
         "Internal audit services and reviews",
@@ -50,7 +97,7 @@
       "id": "business-consulting",
       "title": "Business Consulting",
       "shortDescription": "Strategic guidance for business growth and optimization",
-      "fullDescription": "Our business consulting services help organizations identify opportunities, streamline operations, and develop strategies for sustainable growth and improved profitability. We work closely with your team to understand your unique challenges and develop customized solutions.",
+      "fullDescription": "Our <strong>Business Consulting Services</strong> help organizations <em>unlock their full potential</em> by identifying new growth opportunities, improving efficiency, and developing <u>strategic plans for sustainable success</u>. We collaborate closely with your leadership team to understand your unique goals, challenges, and market dynamics. Through <strong>data-driven insights</strong> and <strong>proven methodologies</strong>, we craft tailored solutions that enhance productivity, optimize operations, and drive measurable performance improvements. Our team provides end-to-end support — from strategy formulation to implementation — ensuring that every initiative delivers real impact. Whether your focus is on <em>process optimization</em>, <em>organizational restructuring</em>, or <em>strategic expansion</em>, we help your business stay agile, competitive, and ready for long-term growth.",
       "features": [
         "Strategic planning and roadmapping",
         "Process optimization and automation",
@@ -73,7 +120,7 @@
       "id": "bookkeeping-cfo",
       "title": "Bookkeeping & Virtual CFO Services",
       "shortDescription": "Accurate bookkeeping and expert virtual CFO guidance for smarter financial management",
-      "fullDescription": "Our comprehensive bookkeeping and virtual CFO services provide you with accurate financial records and strategic financial leadership. We handle your day-to-day financial operations while providing executive-level financial guidance to drive your business forward.",
+      "fullDescription": "<p>Our comprehensive <b>bookkeeping</b> and <b>virtual CFO services</b> are designed to provide your business with <i>exceptionally accurate financial records</i> and <i>strategic financial leadership</i> that drives growth and stability. We meticulously manage your <b>day-to-day financial operations</b>, including <i>accounts payable and receivable, bank reconciliations, payroll management, and financial reporting</i>, ensuring that your records are always <b>up-to-date, precise, and fully compliant</b> with regulatory requirements.</p> <p>Beyond standard bookkeeping, our <b>Virtual CFO services</b> deliver <i>executive-level insights</i> that help you <b>optimize cash flow</b>, <i>forecast future financial performance</i>, and develop <b>strategic plans</b> tailored to your business goals. We work closely with you to identify <i>opportunities for cost savings, investment, and growth</i>, providing actionable advice that empowers you to make <b>informed financial decisions.</b></p><p>With our support, you gain more than just <i>financial management</i>; you gain a <b>trusted partner</b> dedicated to enhancing your <i>business efficiency, profitability, and long-term sustainability</i>. Let us handle the complexities of finance so you can focus on <b>growing your business</b> and achieving <i>your strategic objectives</i> with confidence.</p>",
       "features": [
         "Daily bookkeeping and record maintenance",
         "Monthly financial reporting and analysis",
@@ -96,7 +143,7 @@
       "id": "hr-services",
       "title": "Human Resources Services",
       "shortDescription": "Comprehensive HR solutions covering recruitment, payroll, compliance, and employee development",
-      "fullDescription": "Our human resources services provide comprehensive HR solutions to help you manage your workforce effectively. From recruitment and onboarding to payroll management and compliance, we handle all aspects of human resource management so you can focus on growing your business.",
+      "fullDescription": "Human resources, being the <strong>most vital asset</strong> of any organization, require careful management, ongoing attention, and specialized expertise. Effective HR management involves recruiting the <em>right person for the right job at the right time</em>, continuously motivating employees, defining clear roles and responsibilities, and developing a skilled and efficient workforce. Our team recognizes the critical role of a strong workforce and leverages this understanding to deliver comprehensive <strong>HR solutions</strong> that enhance employee performance, engagement, and organizational productivity. We provide tailored services that support recruitment, training, performance management, and workforce optimization, ensuring your organization achieves its strategic goals while maintaining a motivated and capable team.",
       "features": [
         "Recruitment and talent acquisition",
         "Payroll processing and management",
@@ -119,7 +166,7 @@
       "id": "taxation-compliance",
       "title": "Taxation & Regulatory Compliance",
       "shortDescription": "Expert tax planning and regulatory compliance services ensuring accuracy and legal adherence",
-      "fullDescription": "Our taxation and regulatory compliance services ensure your business meets all legal requirements while optimizing your tax position. We stay current with changing regulations and provide proactive guidance to keep your business compliant and efficient.",
+      "fullDescription": "Our <strong>Taxation and Regulatory Compliance</strong> services are designed to ensure your business remains fully compliant with all legal and statutory requirements while maximizing financial efficiency. We go beyond routine tax filing by offering proactive advisory and strategic planning to optimize your overall tax position. Our experts continuously monitor evolving laws, regulations, and government policies to help your business adapt quickly and avoid potential risks. From preparing accurate documentation to handling audits, filings, and complex compliance matters, we provide end-to-end support that keeps your operations transparent, efficient, and secure. With our guidance, you can focus on growth while we ensure that your financial and regulatory obligations are managed with precision and integrity.",
       "features": [
         "Corporate tax preparation and filing",
         "Regulatory compliance monitoring",
@@ -137,6 +184,122 @@
       "image": "/images/taxation-compliance.jpg",
       "icon": "calculator",
       "category": "taxation"
+    },
+    {
+      "id": "accounting-finance-outsourcing",
+      "title": "Accounting and Finance Outsourcing",
+      "shortDescription": "End-to-end accounting and finance outsourcing for cost efficiency, accuracy, and strategic growth.",
+      "fullDescription": "Our <b>Accounting and Finance Outsourcing</b> services provide businesses with a reliable and cost-effective way to manage their financial operations while maintaining complete accuracy and compliance. We offer a full suite of outsourcing solutions, including bookkeeping, payroll management, financial reporting, and analysis. Our experts utilize advanced accounting tools and best practices to ensure efficiency, transparency, and real-time insights into your financial performance. By outsourcing your finance functions, you can focus on strategic decision-making and business growth while we handle your day-to-day financial management with precision and confidentiality. Whether you’re a startup or an established enterprise, we tailor our services to meet your unique operational and reporting needs.",
+      "features": [
+        "Comprehensive bookkeeping and accounting management",
+        "Payroll processing and compliance",
+        "Financial statement preparation and reporting",
+        "Budgeting, forecasting, and variance analysis",
+        "Cash flow management and financial control",
+        "Technology-driven financial process automation"
+      ],
+      "benefits": [
+        "Reduced operational costs and overhead",
+        "Accurate and timely financial reporting",
+        "Improved decision-making through data insights",
+        "More time to focus on core business growth"
+      ],
+      "image": "/images/accounting-finance-outsourcing.jpg",
+      "icon": "briefcase",
+      "category": "finance"
+    },
+
+    {
+      "id": "merger-acquisition",
+      "title": "Merger & Acquisition",
+      "shortDescription": "Comprehensive M&A advisory for seamless transactions, value maximization, and strategic business growth.",
+      "fullDescription": "Our <b>Merger & Acquisition (M&A)</b> services provide end-to-end support throughout the entire transaction lifecycle, helping businesses identify opportunities, assess risks, and execute successful mergers or acquisitions. We combine financial, legal, and strategic expertise to deliver customized solutions that ensure smooth integration and maximize shareholder value. From due diligence and valuation to negotiation and post-merger integration, our experts guide you through each stage with precision and confidentiality. We focus on creating synergies, minimizing disruptions, and achieving long-term growth. Whether you are acquiring, merging, or divesting, we help you make informed decisions that align with your strategic objectives and strengthen your competitive advantage.",
+      "features": [
+        "Comprehensive financial and strategic due diligence",
+        "Business valuation and risk assessment",
+        "Deal structuring and negotiation support",
+        "Post-merger integration and performance optimization",
+        "Regulatory and tax compliance management",
+        "Cross-border transaction advisory"
+      ],
+      "benefits": [
+        "Maximized business value and return on investment",
+        "Smooth and efficient transaction execution",
+        "Reduced legal, financial, and operational risks",
+        "Long-term growth and competitive advantage"
+      ],
+      "image": "/images/merger-acquisition.jpg",
+      "icon": "handshake",
+      "category": "corporate"
+    },
+    {
+      "id": "system-setup-enhancement",
+      "title": "System Set Up and Enhancement",
+      "shortDescription": "Streamlined system setup and optimization to enhance operational efficiency and performance.",
+      "fullDescription": "Our <b>System Set Up and Enhancement</b> services are designed to help organizations establish efficient, scalable, and technology-driven systems that strengthen business operations and improve performance. We assess your existing infrastructure, identify gaps, and implement robust solutions that align with your business objectives. From financial and accounting systems to enterprise resource planning (ERP) and process automation, our experts ensure seamless integration and long-term reliability. We also focus on continuous improvement, upgrading existing systems to adapt to changing business needs and technological advancements. With our tailored approach, we help you achieve enhanced data accuracy, faster workflows, and improved decision-making capabilities.",
+      "features": [
+        "Complete financial and accounting system setup",
+        "ERP implementation and integration",
+        "Process automation and workflow optimization",
+        "System audit and performance review",
+        "Data migration and configuration support",
+        "Continuous improvement and system updates"
+      ],
+      "benefits": [
+        "Improved operational efficiency and accuracy",
+        "Seamless integration across departments",
+        "Enhanced data reliability and visibility",
+        "Future-ready systems with scalable architecture"
+      ],
+      "image": "/images/system-setup-enhancement.jpg",
+      "icon": "settings",
+      "category": "technology"
+    },
+    {
+      "id": "risk-investigations",
+      "title": "Risk & Investigations",
+      "shortDescription": "Comprehensive risk management and investigative solutions to safeguard business integrity and compliance.",
+      "fullDescription": "Our <b>Risk & Investigations</b> services provide in-depth analysis and proactive strategies to identify, assess, and mitigate potential business threats. We specialize in detecting financial irregularities, fraud risks, and compliance breaches through systematic investigations and forensic techniques. Our experts evaluate internal controls, operational processes, and governance frameworks to ensure your organization’s resilience and regulatory adherence. By leveraging data-driven insights and industry best practices, we help you minimize exposure to financial, operational, and reputational risks. Whether you need a preventive risk assessment or a detailed investigation of irregular activities, we deliver actionable solutions that strengthen trust, transparency, and long-term stability within your organization.",
+      "features": [
+        "Comprehensive risk assessment and analysis",
+        "Forensic accounting and fraud investigation",
+        "Internal control evaluation and enhancement",
+        "Regulatory and compliance reviews",
+        "Crisis and incident management support",
+        "Continuous monitoring and reporting systems"
+      ],
+      "benefits": [
+        "Early identification and mitigation of risks",
+        "Enhanced organizational transparency and governance",
+        "Protection against fraud and financial misconduct",
+        "Sustained business credibility and stakeholder trust"
+      ],
+      "image": "/images/risk-investigations.jpg",
+      "icon": "shield-alert",
+      "category": "risk"
+    },
+    {
+      "id": "valuation-business-modelling",
+      "title": "Valuation And Business Modelling",
+      "shortDescription": "Expert valuation and business modelling services to determine enterprise worth, forecast performance, and support informed decision-making.",
+      "fullDescription": "Our <b>Valuation and Business Modelling</b> services provide a robust foundation for strategic growth and financial clarity. We combine <i>comprehensive valuation techniques</i> with <b>advanced financial modeling</b> to assess business worth, analyze investment opportunities, and evaluate future scenarios. Our experts leverage <b>market data, financial analytics, and industry insights</b> to create customized models that support mergers, acquisitions, fundraising, and strategic planning. Whether you need a fair market valuation, scenario-based forecasting, or decision support models, we ensure <i>accuracy, transparency, and actionable insights</i> that enhance business confidence and investor trust. With our in-depth approach, your organization gains the clarity to drive value creation and sustainable success.",
+      "features": [
+        "Comprehensive business valuation and analysis",
+        "Financial forecasting and scenario modelling",
+        "Discounted cash flow and comparable analysis",
+        "Investment and capital structure assessment",
+        "Support for mergers, acquisitions, and fundraising",
+        "Data-driven strategic decision-making models"
+      ],
+      "benefits": [
+        "Accurate and defensible business valuations",
+        "Improved financial planning and decision-making",
+        "Enhanced investor and stakeholder confidence",
+        "Optimized strategic and investment outcomes"
+      ],
+      "image": "/images/valuation-business-modelling.jpg",
+      "icon": "trending-up",
+      "category": "finance"
     }
   ]
 }

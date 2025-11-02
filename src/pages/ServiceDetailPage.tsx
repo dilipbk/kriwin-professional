@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, Link, Navigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { SEOHead } from "../components/common/SEOHead";
 import {
@@ -17,21 +17,17 @@ export const ServiceDetailPage: React.FC = () => {
 
   const service = servicesData.services.find(s => s.id === serviceId);
 
-  if (!service) {
-    return <Navigate to="/services" replace />;
-  }
-
   const relatedServices = servicesData.services
-    .filter(s => s.id !== serviceId && s.category === service.category)
+    .filter(s => s.id !== serviceId && s.category === service?.category)
     .slice(0, 3);
 
   return (
     <>
       <SEOHead
-        title={`${service.title} - Kriwin Professional Consultancy`}
-        description={service.fullDescription}
-        keywords={`${service.title}, ${service.category}, financial services, consulting`}
-        url={`https://kriwin-consultancy.com/services/${service.id}`}
+        title={`${service?.title} - Kriwin Professional Consultancy`}
+        description={service?.fullDescription}
+        keywords={`${service?.title}, ${service?.category}, financial services, consulting`}
+        url={`https://kriwin-consultancy.com/services/${service?.id}`}
         type="article"
       />
 
@@ -84,7 +80,7 @@ export const ServiceDetailPage: React.FC = () => {
               </Link>
               <span>/</span>
               <span className="text-gray-900 dark:text-white font-medium">
-                {service.title}
+                {service?.title}
               </span>
             </motion.nav>
 
@@ -93,8 +89,10 @@ export const ServiceDetailPage: React.FC = () => {
               {...scaleInSpring}
             >
               <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full mr-2"></span>
-              {service.category.charAt(0).toUpperCase() +
-                service.category.slice(1)}{" "}
+              {service
+                ? service.category.charAt(0).toUpperCase() +
+                  service.category.slice(1)
+                : ""}{" "}
               Services
             </motion.div>
 
@@ -104,7 +102,7 @@ export const ServiceDetailPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              {service.title}
+              {service?.title}
             </motion.h1>
 
             <motion.p
@@ -113,7 +111,7 @@ export const ServiceDetailPage: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
             >
-              {service.shortDescription}
+              {service?.shortDescription}
             </motion.p>
 
             <motion.div
@@ -172,33 +170,36 @@ export const ServiceDetailPage: React.FC = () => {
       </motion.section>
 
       {/* Service Details */}
-      <motion.section
+      <div
         className="py-20 bg-white dark:bg-slate-900"
-        {...viewportAnimation}
+        // {...viewportAnimation}
       >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <motion.div
+              <div
                 className="prose prose-lg dark:prose-invert max-w-none"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                // initial={{ opacity: 0, y: 30 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // viewport={{ once: true }}
+                // transition={{ duration: 0.8 }}
               >
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                   Service Overview
                 </h2>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                  {service.fullDescription}
-                </p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: service?.fullDescription ?? "",
+                  }}
+                  className="text-gray-600 full-description dark:text-gray-300 leading-relaxed mb-8"
+                ></p>
 
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Key Features
                 </h3>
                 <ul className="space-y-3 mb-8">
-                  {service.features.map((feature, index) => (
+                  {service?.features.map((feature, index) => (
                     <motion.li
                       key={index}
                       className="flex items-start space-x-3"
@@ -231,7 +232,7 @@ export const ServiceDetailPage: React.FC = () => {
                   Benefits You'll Receive
                 </h3>
                 <ul className="space-y-3">
-                  {service.benefits.map((benefit, index) => (
+                  {service?.benefits.map((benefit, index) => (
                     <motion.li
                       key={index}
                       className="flex items-start space-x-3"
@@ -261,17 +262,17 @@ export const ServiceDetailPage: React.FC = () => {
                     </motion.li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             </div>
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <motion.div
+              <div
                 className="sticky top-32 space-y-8"
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                // initial={{ opacity: 0, x: 30 }}
+                // whileInView={{ opacity: 1, x: 0 }}
+                // viewport={{ once: true }}
+                // transition={{ duration: 0.8 }}
               >
                 {/* Contact Card */}
                 <div className="bg-gradient-to-br from-blue-600 to-blue-800 dark:from-blue-500 dark:to-blue-700 rounded-2xl p-8 text-white">
@@ -311,7 +312,7 @@ export const ServiceDetailPage: React.FC = () => {
                         Category
                       </span>
                       <span className="font-semibold text-gray-900 dark:text-white capitalize">
-                        {service.category}
+                        {service?.category}
                       </span>
                     </div>
                     <div className="flex justify-between items-center py-2 border-b border-gray-100 dark:border-gray-700">
@@ -332,11 +333,11 @@ export const ServiceDetailPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
-      </motion.section>
+      </div>
 
       {/* Related Services */}
       {relatedServices.length > 0 && (
@@ -356,7 +357,7 @@ export const ServiceDetailPage: React.FC = () => {
                 Related Services
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300">
-                Explore other services in the {service.category} category
+                Explore other services in the {service?.category} category
               </p>
             </motion.div>
 
@@ -424,7 +425,7 @@ export const ServiceDetailPage: React.FC = () => {
                 Start Your Journey Today
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                Take the first step towards optimizing your {service.category}{" "}
+                Take the first step towards optimizing your {service?.category}{" "}
                 processes. Our expert team is ready to help you achieve your
                 business goals.
               </p>

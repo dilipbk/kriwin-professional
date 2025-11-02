@@ -277,7 +277,7 @@ export const ContactSection: React.FC = () => {
                       <p className="text-blue-100">Available 24/7</p>
                     </div>
                   </div>
-                  <p className="text-2xl font-bold mb-2">+1 (555) 123-4567</p>
+                  <p className="text-2xl font-bold mb-2">+977 9851224841</p>
                   <p className="text-blue-100">Free consultation call</p>
                 </div>
               </motion.div>
@@ -367,11 +367,10 @@ export const ContactSection: React.FC = () => {
                     </motion.div>
                     <div>
                       <h3 className="text-xl font-bold">Visit Us</h3>
-                      <p className="text-orange-100">Mon - Fri, 9AM - 6PM</p>
+                      <p className="text-orange-100">Sun - Sat, 9AM - 6PM</p>
                     </div>
                   </div>
-                  <p className="text-lg font-bold mb-2">Sallaghari - 10</p>
-                  <p className="text-orange-100">Bhaktapur, Nepal</p>
+                  <p className="text-orange-100">Bagdole, Lalitpur</p>
                 </div>
               </motion.div>
             </motion.div>

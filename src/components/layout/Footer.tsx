@@ -47,9 +47,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
                       Corporate Headquarters
                     </div>
                     <div className="text-slate-400 text-sm">
-                      Sallaghari, 10
-                      <br />
-                      Bhaktapur, Nepal
+                      Bagdole, Lalitpur
                     </div>
                   </div>
                 </div>
@@ -60,7 +58,7 @@ export const Footer: React.FC<FooterProps> = ({ className }) => {
                   </div>
                   <div>
                     <div className="text-white font-medium">
-                      +1 (555) 123-4567
+                      +977 9851224841
                     </div>
                     <div className="text-slate-400 text-sm">
                       24/7 Client Support

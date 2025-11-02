@@ -51,7 +51,7 @@ export const ContactPage: React.FC = () => {
       ),
       title: "Call Us",
       subtitle: "Available 24/7",
-      content: "+1 (555) 123-4567",
+      content: "+977 9851224841",
       description: "Free consultation call",
       gradient: "from-blue-600 to-blue-700",
     },
@@ -79,24 +79,24 @@ export const ContactPage: React.FC = () => {
         </svg>
       ),
       title: "Visit Us",
-      subtitle: "Mon - Fri, 9AM - 6PM",
-      content: "Sallaghari - 10",
-      description: "Bhaktapur, Nepal",
+      subtitle: "Sun - Sat, 9AM - 6PM",
+      // content: "Sallaghari - 10",
+      description: "Bagdole, Lalitpur",
       gradient: "from-orange-600 to-orange-700",
     },
   ];
 
   const officeHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "9:00 AM - 2:00 PM" },
-    { day: "Sunday", hours: "Closed" },
+    { day: "Sunday - Saturday", hours: "9:00 AM - 6:00 PM" },
+
+    { day: "Saturday", hours: "Closed" },
   ];
 
   const faqs = [
     {
       question: "How do I schedule a consultation?",
       answer:
-        "You can schedule a free consultation by calling us at +1 (555) 123-4567, emailing us, or filling out the contact form on this page. We'll respond within 24 hours to set up a convenient time.",
+        "You can schedule a free consultation by calling us at +977 9851224841, emailing us, or filling out the contact form on this page. We'll respond within 24 hours to set up a convenient time.",
     },
     {
       question: "What should I bring to my first meeting?",
@@ -119,7 +119,7 @@ export const ContactPage: React.FC = () => {
     <>
       <SEOHead
         title="Contact Us - Kriwin Professional Consultancy | Get Expert Financial Advice"
-        description="Contact our expert team for professional financial consulting services. Schedule a free consultation today. Call +1 (555) 123-4567 or visit our Bhaktapur office."
+        description="Contact our expert team for professional financial consulting services. Schedule a free consultation today. Call ++977 9851224841 or visit our Bhaktapur office."
         keywords="contact kriwin consultancy, financial consultant contact, chartered accountant NYC, tax planning consultation, business consulting contact"
         url="https://kriwin-consultancy.com/contact"
         type="website"
@@ -485,7 +485,7 @@ export const ContactPage: React.FC = () => {
                 Visit Our Office
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Sallaghari - 10, Bhaktapur, Nepal
+                Bagdole, Lalitpur
               </p>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                 Interactive map coming soon

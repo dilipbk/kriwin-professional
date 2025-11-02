@@ -304,14 +304,8 @@ export const ServicesSection: React.FC = () => {
 
               {/* Main Card */}
               <motion.div
-                className="relative bg-white h-full dark:bg-gray-800 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden"
+                className="relative bg-white h-full dark:bg-gray-800 rounded-3xl shadow-xs hover:shadow-lg transition-all duration-500 border border-gray-100 dark:border-gray-700 overflow-hidden"
                 {...cardHoverFloat}
-                whileHover={{
-                  y: -12,
-                  scale: 1.03,
-                  rotateY: 5,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
-                }}
               >
                 {/* Gradient Background on Hover */}
                 {/* <div

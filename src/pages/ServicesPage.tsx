@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { PageTransition } from "../components/ui";
 import { SEOHead } from "../components/common/SEOHead";
 import {
   sectionSlideUp,

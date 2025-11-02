@@ -13,161 +13,308 @@ import {
   scaleInSpring,
 } from "../utils/animations";
 
+const projects = [
+  {
+    id: 1,
+    title: "Chief Finance Officer - Cricket Association of Nepal",
+    category: "finance-management",
+    client: "Cricket Association of Nepal",
+    industry: "Sports",
+    description:
+      "Appointed by ICC as CFO, managed financial planning, budgeting, and auditing for the association.",
+    challenge: "Lack of structured financial management and reporting",
+    solution:
+      "Implemented robust financial control, reporting systems, and policy frameworks",
+    results: [
+      "Streamlined financial operations",
+      "Ensured compliance with international standards",
+      "Improved transparency and reporting accuracy",
+    ],
+    image: "CAN",
+    gradient: "from-green-500 to-blue-600",
+    year: "2021-2022",
+    duration: "2 years",
+  },
+  {
+    id: 2,
+    title: "Finance Consultant - Cricket Association of Nepal",
+    category: "finance-consulting",
+    client: "Cricket Association of Nepal",
+    industry: "Sports",
+    description:
+      "Provided advisory services for financial planning and management.",
+    challenge: "Need for professional financial consultancy and optimization",
+    solution:
+      "Reviewed financial processes and provided strategic recommendations",
+    results: [
+      "Enhanced financial decision-making",
+      "Improved budgeting and fund allocation",
+      "Increased operational efficiency",
+    ],
+    image: "CAN",
+    gradient: "from-yellow-400 to-red-500",
+    year: "2022",
+    duration: "1 year",
+  },
+  {
+    id: 3,
+    title: "Internal Audit - Asian Football Confederation (AFC)",
+    category: "audit",
+    client: "Asian Football Confederation",
+    industry: "Sports",
+    description:
+      "Conducted internal audits ensuring compliance and financial transparency.",
+    challenge: "Financial compliance and governance issues",
+    solution: "Performed comprehensive internal audits",
+    results: [
+      "Identified financial discrepancies and recommended corrective actions",
+      "Strengthened internal control systems",
+    ],
+    image: "AFC",
+    gradient: "from-purple-500 to-pink-500",
+    year: "2018-2019",
+    duration: "2 years",
+  },
+  {
+    id: 4,
+    title: "Internal Audit - FIFA",
+    category: "audit",
+    client: "FIFA",
+    industry: "Sports",
+    description:
+      "Performed internal audits for FIFA’s financial year 2075-76, 2076-77.",
+    challenge: "Ensuring global compliance standards",
+    solution: "Reviewed financial records and processes in detail",
+    results: [
+      "Strengthened compliance frameworks",
+      "Improved audit reporting accuracy",
+    ],
+    image: "FIFA",
+    gradient: "from-purple-600 to-blue-600",
+    year: "2018-2019",
+    duration: "2 years",
+  },
+  {
+    id: 5,
+    title: "Internal Audit - All Nepal Football Association (ANFA)",
+    category: "audit",
+    client: "ANFA",
+    industry: "Sports",
+    description:
+      "Conducted internal audits for ANFA across multiple financial years.",
+    challenge: "Need for improved internal financial controls",
+    solution: "Evaluated internal systems and compliance measures",
+    results: [
+      "Enhanced financial governance",
+      "Reduced risk of financial mismanagement",
+    ],
+    image: "ANFA",
+    gradient: "from-blue-400 to-teal-500",
+    year: "2018-2019",
+    duration: "2 years",
+  },
+  {
+    id: 6,
+    title: "Statutory Audit - Nepal Bank Limited",
+    category: "audit",
+    client: "Nepal Bank Limited",
+    industry: "Banking",
+    description:
+      "Conducted statutory audits including loan & advances, operational and risk management audits.",
+    challenge: "Complex banking operations and regulatory compliance",
+    solution: "Performed detailed audits and recommended corrective actions",
+    results: [
+      "Improved operational efficiency",
+      "Ensured regulatory compliance",
+    ],
+    image: "NepalBank",
+    gradient: "from-blue-500 to-indigo-500",
+    year: "2018-2022",
+    duration: "4 years",
+  },
+  {
+    id: 7,
+    title: "Audit - Dalit NGO Federation (USAID Funded Projects)",
+    category: "audit",
+    client: "Dalit NGO Federation",
+    industry: "NGO",
+    description:
+      "Audited USAID funded OSF & FHI projects ensuring compliance with donor regulations.",
+    challenge: "Ensure accountability for international donor funds",
+    solution: "Conducted thorough audits and reporting",
+    results: [
+      "Ensured compliance with donor requirements",
+      "Improved fund utilization",
+    ],
+    image: "DalitNGO",
+    gradient: "from-green-400 to-blue-500",
+    year: "2019-2022",
+    duration: "3 years",
+  },
+  {
+    id: 8,
+    title:
+      "Financial Policy Drafting - Dhanlaxmi Saving & Credit Co-operative Bank",
+    category: "policy-consulting",
+    client: "Dhanlaxmi S&CC Bank",
+    industry: "Banking",
+    description:
+      "Drafted bylaws and financial, HR, loan, and savings policies.",
+    challenge: "Lack of formalized operational and financial policies",
+    solution: "Created comprehensive internal policies",
+    results: [
+      "Standardized banking operations",
+      "Improved governance and compliance",
+    ],
+    image: "Dhanlaxmi",
+    gradient: "from-indigo-500 to-purple-600",
+    year: "2018-2022",
+    duration: "4 years",
+  },
+  {
+    id: 9,
+    title:
+      "Financial Policy Drafting - Mahila Saving & Credit Cooperative Bank",
+    category: "policy-consulting",
+    client: "Mahila S&CC Bank",
+    industry: "Banking",
+    description: "Drafted all bylaws and internal policies.",
+    challenge: "Lack of structured operational framework",
+    solution: "Developed comprehensive policies",
+    results: ["Improved internal governance", "Streamlined operations"],
+    image: "MahilaBank",
+    gradient: "from-pink-400 to-red-500",
+    year: "2018-2022",
+    duration: "4 years",
+  },
+  {
+    id: 10,
+    title:
+      "Financial Policy Drafting - Matamankamana Multipurpose Cooperative Bank",
+    category: "policy-consulting",
+    client: "Matamankamana Multipurpose Co-op Bank",
+    industry: "Banking",
+    description: "Drafted all bylaws and operational policies.",
+    challenge: "Lack of formal governance structure",
+    solution: "Developed financial and operational policies",
+    results: ["Enhanced governance", "Improved operational efficiency"],
+    image: "Matamankamana",
+    gradient: "from-yellow-400 to-orange-500",
+    year: "2018-2022",
+    duration: "4 years",
+  },
+  {
+    id: 11,
+    title: "Finance & Cost Consultant - SB Cooling Corporation, India",
+    category: "finance-consulting",
+    client: "SB Cooling Corporation",
+    industry: "Manufacturing",
+    description:
+      "Managed finance, cost, and operational decision-making for the company.",
+    challenge: "High operational costs and inefficient financial management",
+    solution: "Implemented cost reduction strategies and optimized workflows",
+    results: [
+      "Reduced operational costs",
+      "Improved financial reporting accuracy",
+      "Enhanced departmental decision-making",
+    ],
+    image: "SBC",
+    gradient: "from-orange-400 to-red-500",
+    year: "2015-2019",
+    duration: "4 years",
+  },
+  {
+    id: 12,
+    title: "Finance Management Head - SBC Cooling Private Limited, India",
+    category: "finance-consulting",
+    client: "SBC Cooling Pvt Ltd",
+    industry: "Manufacturing",
+    description:
+      "Oversaw finance operations and participated in company-wide strategic decisions.",
+    challenge: "Need for integrated financial management across departments",
+    solution:
+      "Implemented finance controls and optimized interdepartmental decision-making",
+    results: ["Streamlined finance operations", "Improved reporting accuracy"],
+    image: "SBC",
+    gradient: "from-blue-500 to-green-500",
+    year: "2015-2019",
+    duration: "4 years",
+  },
+  {
+    id: 13,
+    title: "Teaching - Professional Institutions, India",
+    category: "training-education",
+    client: "CA Institutions, Surat, India",
+    industry: "Education",
+    description:
+      "Delivered CA Final and IPCC courses in finance, cost, taxation, and accounting.",
+    challenge: "Need for expert-level finance training",
+    solution: "Prepared curriculum and conducted specialized lectures",
+    results: [
+      "Trained multiple batches of students",
+      "Improved student understanding of finance and cost management",
+    ],
+    image: "Education",
+    gradient: "from-green-400 to-blue-500",
+    year: "2015-2019",
+    duration: "4 years",
+  },
+  {
+    id: 14,
+    title: "Article Assistant - Vipul Kapadiya & Co., India",
+    category: "audit-tax",
+    client: "Vipul Kapadiya & Co.",
+    industry: "Chartered Accountancy",
+    description:
+      "Handled taxation, statutory audits, and project management for clients.",
+    challenge: "Complex multi-client statutory and tax compliance",
+    solution:
+      "Managed TDS, GST, service tax, income tax filings, and audit reports efficiently",
+    results: [
+      "Streamlined client compliance processes",
+      "Improved audit efficiency",
+      "Gained expertise in internal control systems",
+    ],
+    image: "CAFirm",
+    gradient: "from-purple-400 to-pink-500",
+    year: "2012-2015",
+    duration: "3.5 years",
+  },
+  {
+    id: 15,
+    title: "Revenue & Cooperative Bank Audit - India",
+    category: "audit",
+    client: "Surat People’s Co-operative Bank & others",
+    industry: "Banking",
+    description:
+      "Performed internal and external audits for multiple cooperative banks in India.",
+    challenge: "Ensure compliance with regulatory requirements",
+    solution: "Conducted thorough audits and prepared reports",
+    results: [
+      "Strengthened compliance frameworks",
+      "Improved operational transparency",
+    ],
+    image: "CoopBank",
+    gradient: "from-indigo-500 to-blue-500",
+    year: "2012-2016",
+    duration: "4 years",
+  },
+];
+
 export const PortfolioPage: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const categories = [
-    { id: "all", label: "All Projects" },
-    { id: "tax-planning", label: "Tax Planning" },
-    { id: "audit", label: "Audit & Assurance" },
-    { id: "consulting", label: "Business Consulting" },
-    { id: "corporate-finance", label: "Corporate Finance" },
-  ];
-
-  const projects = [
-    {
-      id: 1,
-      title: "TechStart Inc. Tax Optimization",
-      category: "tax-planning",
-      client: "TechStart Inc.",
-      industry: "Technology",
-      description:
-        "Comprehensive tax planning strategy that resulted in $200K+ annual savings through strategic restructuring and optimization.",
-      challenge: "High tax burden affecting cash flow and growth potential",
-      solution:
-        "Implemented strategic tax planning including entity restructuring, R&D credits, and international tax optimization",
-      results: [
-        "Reduced tax liability by 35%",
-        "Saved $200K+ annually",
-        "Improved cash flow by 25%",
-        "Enhanced compliance processes",
-      ],
-      image: "TS",
-      gradient: "from-blue-500 to-purple-600",
-      year: "2024",
-      duration: "6 months",
-    },
-    {
-      id: 2,
-      title: "Growth Dynamics IPO Preparation",
-      category: "audit",
-      client: "Growth Dynamics",
-      industry: "Manufacturing",
-      description:
-        "Complete audit and compliance preparation for successful IPO, ensuring regulatory compliance and investor confidence.",
-      challenge:
-        "Preparing financial statements and controls for public company requirements",
-      solution:
-        "Comprehensive audit, internal controls review, and compliance framework implementation",
-      results: [
-        "Successful IPO completion",
-        "Zero audit findings",
-        "Enhanced internal controls",
-        "Improved investor confidence",
-      ],
-      image: "GD",
-      gradient: "from-green-500 to-teal-600",
-      year: "2023",
-      duration: "12 months",
-    },
-    {
-      id: 3,
-      title: "InnovateLab Series A Funding",
-      category: "corporate-finance",
-      client: "InnovateLab",
-      industry: "Biotech",
-      description:
-        "Strategic financial advisory for Series A funding round, including valuation, due diligence, and investor relations.",
-      challenge:
-        "Securing growth capital while maintaining favorable valuation and terms",
-      solution:
-        "Comprehensive financial modeling, investor presentation, and negotiation support",
-      results: [
-        "Secured $5M Series A",
-        "Achieved target valuation",
-        "Streamlined due diligence",
-        "Strong investor relations",
-      ],
-      image: "IL",
-      gradient: "from-orange-500 to-red-600",
-      year: "2024",
-      duration: "4 months",
-    },
-    {
-      id: 4,
-      title: "RetailMax Operational Efficiency",
-      category: "consulting",
-      client: "RetailMax",
-      industry: "Retail",
-      description:
-        "Business process optimization and financial restructuring to improve operational efficiency and profitability.",
-      challenge:
-        "Declining margins and operational inefficiencies across multiple locations",
-      solution:
-        "Process analysis, cost optimization, and performance management system implementation",
-      results: [
-        "Improved margins by 18%",
-        "Reduced operational costs by 22%",
-        "Enhanced reporting systems",
-        "Streamlined operations",
-      ],
-      image: "RM",
-      gradient: "from-purple-500 to-pink-600",
-      year: "2023",
-      duration: "8 months",
-    },
-    {
-      id: 5,
-      title: "HealthCorp Merger Advisory",
-      category: "corporate-finance",
-      client: "HealthCorp",
-      industry: "Healthcare",
-      description:
-        "M&A advisory services for strategic acquisition, including valuation, due diligence, and integration planning.",
-      challenge:
-        "Complex healthcare industry regulations and integration challenges",
-      solution:
-        "Comprehensive due diligence, regulatory compliance review, and integration strategy",
-      results: [
-        "Successful merger completion",
-        "Regulatory approval achieved",
-        "Seamless integration",
-        "Synergy realization of $3M+",
-      ],
-      image: "HC",
-      gradient: "from-indigo-500 to-blue-600",
-      year: "2024",
-      duration: "10 months",
-    },
-    {
-      id: 6,
-      title: "EcoEnergy Tax Credit Optimization",
-      category: "tax-planning",
-      client: "EcoEnergy Solutions",
-      industry: "Renewable Energy",
-      description:
-        "Specialized tax planning for renewable energy projects, maximizing available tax credits and incentives.",
-      challenge:
-        "Complex renewable energy tax credit landscape and compliance requirements",
-      solution:
-        "Comprehensive tax credit analysis, structuring, and compliance management",
-      results: [
-        "Maximized tax credits worth $1.2M",
-        "Improved project ROI by 15%",
-        "Enhanced compliance framework",
-        "Ongoing tax optimization",
-      ],
-      image: "EE",
-      gradient: "from-green-500 to-emerald-600",
-      year: "2023",
-      duration: "5 months",
-    },
+    "all",
+    ...new Set(projects.map(project => project.category.replace("-", " "))),
   ];
 
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter(project => project.category === activeFilter);
+      : projects.filter(
+          project => project.category.replace("-", " ") === activeFilter
+        );
 
   const testimonials = [
     {
@@ -303,17 +450,17 @@ export const PortfolioPage: React.FC = () => {
           >
             {categories.map(category => (
               <motion.button
-                key={category.id}
-                onClick={() => setActiveFilter(category.id)}
-                className={`px-6 py-3 rounded-2xl font-semibold transition-all duration-300 ${
-                  activeFilter === category.id
+                key={category}
+                onClick={() => setActiveFilter(category)}
+                className={`px-6 py-3 rounded-2xl capitalize font-semibold transition-all duration-300 ${
+                  activeFilter === category
                     ? "bg-purple-600 text-white shadow-lg"
                     : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-purple-50 dark:hover:bg-purple-900/20"
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {category.label}
+                {category}
               </motion.button>
             ))}
           </motion.div>
@@ -323,7 +470,7 @@ export const PortfolioPage: React.FC = () => {
       {/* Projects Grid */}
       <motion.section
         className="py-20 bg-gray-50 dark:bg-gray-900"
-        {...viewportAnimation}
+        // {...viewportAnimation}
       >
         <div className="container mx-auto px-4">
           <AnimatePresence mode="wait">
@@ -341,7 +488,7 @@ export const PortfolioPage: React.FC = () => {
                   className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden"
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  // transition={{ duration: 0.6, delay: index * 0.1 }}
                   {...cardHoverFloat}
                 >
                   {/* Project Header */}
@@ -406,7 +553,7 @@ export const PortfolioPage: React.FC = () => {
                       ))}
                     </ul>
 
-                    <motion.button
+                    {/* <motion.button
                       className="w-full mt-6 group relative inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/20 rounded-2xl hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-all duration-300"
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -427,7 +574,7 @@ export const PortfolioPage: React.FC = () => {
                           />
                         </svg>
                       </span>
-                    </motion.button>
+                    </motion.button> */}
                   </div>
                 </motion.div>
               ))}
