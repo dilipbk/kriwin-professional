@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { Link, useLocation } from "react-router-dom";
 import { buttonHover } from "../../utils/animations";
 import { ServicesDropdown } from "../common/ServicesDropdown";
+import servicesData from "@/data/services.json";
 
 interface HeaderProps {
   className?: string;
@@ -226,28 +227,17 @@ export const Header: React.FC<HeaderProps> = ({
                   >
                     All Services
                   </Link>
-                  <div className="ml-4 mt-2 space-y-2">
-                    <Link
-                      to="/services/tax-planning"
-                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Tax Planning & Compliance
-                    </Link>
-                    <Link
-                      to="/services/audit-services"
-                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Audit & Assurance
-                    </Link>
-                    <Link
-                      to="/services/business-consulting"
-                      className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Business Consulting
-                    </Link>
+                  <div className="ml-4 mt-2 hide-scrollbar space-y-2 overflow-y-auto max-h-[170px] ">
+                    {servicesData?.services.map(service => (
+                      <Link
+                        key={service.id}
+                        to={`/services/${service.id}`}
+                        className="text-sm min-h-auto! text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 block transition-colors duration-300"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
                   </div>
                 </div>
 

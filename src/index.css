@@ -549,3 +549,7 @@ html {
   -webkit-box-orient: horizontal;
   -webkit-line-clamp: none;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+}
